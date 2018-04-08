@@ -10,7 +10,7 @@ class SqlalchemyItemMeta(ItemMeta):
 
     def __new__(mcs, class_name, bases, attrs):
         cls = super(SqlalchemyItemMeta, mcs).__new__(mcs, class_name, bases, attrs)
-        if cls.sqlalchemy_model:
+        if cls.sqlalchemy_model is not None:
             cls._model_fields = []
             if isinstance(cls.sqlalchemy_model,DeclarativeMeta):
                 columns = cls.sqlalchemy_model.__table__.columns
