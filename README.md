@@ -1,4 +1,4 @@
 # scrapy_sqlalchemyitem
-提取sqlalchemy中的columns
+### 根据sqlalchemy中的columns自动生成item
 
 ### python setup.py install
